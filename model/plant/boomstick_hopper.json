@@ -1,0 +1,27 @@
+{
+    "Boomstick": {
+        "circumference": 7.2,
+        "height": 0.44
+    },
+    "Leg": {
+        "mass": 1.2,
+        "length_link_1": 0.15,
+        "length_link_2": 0.15,
+        "r_touchdown": 0.15,
+        "r_staging": 0.14,
+        "r_takeoff": 0.19,
+        "r_flight": 0.17,
+        "theta_flight": 94
+    },
+    "Limit": {
+        "t_min": 0.2,
+        "t_max": 3,
+        "v_min": 1.5,
+        "v_max": 2.7,
+        "theta_min": 65,
+        "theta_max": 85
+    },
+    "Margin": {
+        "x_knee": 0.02
+    }
+}

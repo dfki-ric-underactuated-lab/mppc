@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<robot name="box">
+<link name="world"/>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="box"/>
+  </joint>
+  <link name="box">
+    <inertial>
+     <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass value="1"/>
+      <!-- Inertia values were calculated to be consistent with the mass and
+           geometry size, assuming a uniform density. -->
+      <inertia ixx="0.0108" ixy="0" ixz="0" iyy="0.0083" iyz="0" izz="0.0042"/>
+    </inertial>
+    <visual>
+        <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <box size=".02 .05 .002"/>
+      </geometry>
+      <material name="red">
+           <color rgba="0.027450980392156862 0.050980392156862744 0.050980392156862744 1.0"/>
+      </material>
+    </visual>
+    <collision name="box">
+      <geometry>
+        <box size=".0 .0 .0"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>

@@ -1,0 +1,19 @@
+[ABSORPTION]
+Kp_JS = [2.0, 2.0]
+Kd_JS = [0.3, 0.3]
+
+[REPOSITION]
+Kp_JS = [3, 3]
+Kd_JS = [0.1, 0.1]
+
+[STAGING]
+Kp_JS = [11, 9]
+Kd_JS = [0.3, 0.5]
+
+[FLIGHT]
+Kp_JS = [3, 3]
+Kd_JS = [0.1, 0.1]
+
+[EXERTION]
+Kp_CS = [0]
+Kd_CS = [0, 0]

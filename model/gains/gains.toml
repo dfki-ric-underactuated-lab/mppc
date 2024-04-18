@@ -1,0 +1,15 @@
+[ABSORPTION]
+Kp = [0.1, 0.1]
+Kd = [0.5, 0.5]
+
+[REPOSITION]
+Kp = [4.5, 4.5]
+Kd = [0.3, 0.3]
+
+[STAGING]
+Kp = [11, 9]
+Kd = [0.3, 0.5]
+
+[FLIGHT]
+Kp = [3, 3]
+Kd = [0.3, 0.3]

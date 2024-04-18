@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="BS_T_003_000_000">
+  <link name="world"/>
+  <joint name="fixed" type="fixed">
+    <parent link="world"/>
+    <child link="base_link"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.031642560862726 0.000151985737169899 -3.54727825915968E-05"
+        rpy="0 0 0" />
+      <mass
+        value="15.2604761162792" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <link
+    name="link_passive_linear_vertical">
+    <inertial>
+      <origin
+        xyz="0.00248453696671044 0.000697283718244927 -0.191114350260711"
+        rpy="0 0 0" />
+      <mass
+        value="1.24650058624133" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_passive_linear_vertical.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_passive_linear_1"
+    type="fixed">
+    <origin
+      xyz="0.44 0 0"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_passive_linear_vertical" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_yaw">
+    <inertial>
+      <origin
+        xyz="6.21004183637838E-05 2.57503446451324E-08 -0.053410010726096"
+        rpy="0 0 0" />
+      <mass
+        value="0.592796251654104" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.5 0.3 0.7 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_yaw"
+    type="continuous">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_passive_linear_vertical" />
+    <child
+      link="link_yaw" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_pitch">
+    <inertial>
+      <origin
+        xyz="0.000509374570132799 -0.000349729012141437 0.00183612370207631"
+        rpy="0 0 0" />
+      <mass
+        value="0.411507158674437" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_pitch"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_yaw" />
+    <child
+      link="link_pitch" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.7"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_passive_linear_2">
+    <inertial>
+      <origin
+        xyz="-0.000217203966542123 -6.07745801403516E-06 -1.10774775825784"
+        rpy="0 0 0" />
+      <mass
+        value="1.31966574710553" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_passive_linear_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_passive_linear_2"
+    type="fixed">
+    <origin
+      xyz="0 -0.41 0"
+      rpy="1.5707963267949 -1.5707963267949 0" />
+    <parent
+      link="link_pitch" />
+    <child
+      link="link_passive_linear_2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_passive_linear_3">
+    <inertial>
+      <origin
+        xyz="-0.000630879735210643 -8.42278128329298E-06 -0.643003931001163"
+        rpy="0 0 0" />
+      <mass
+        value="0.487068905970872" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_passive_linear_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.866666666666667 0.909803921568627 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_passive_linear_3"
+    type="fixed">
+    <origin
+      xyz="0 0 0.12"
+      rpy="0 0 0" />
+    <parent
+      link="link_passive_linear_2" />
+    <child
+      link="link_passive_linear_3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_passive_linear_4">
+    <inertial>
+      <origin
+        xyz="-0.000674049658381637 -5.2876073195846E-05 -0.661469333744277"
+        rpy="0 0 0" />
+      <mass
+        value="0.454735171291637" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_passive_linear_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_passive_linear_4"
+    type="fixed">
+    <origin
+      xyz="0 0 0.51575"
+      rpy="0 0 0" />
+    <parent
+      link="link_passive_linear_3" />
+    <child
+      link="link_passive_linear_4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_passive_linear_5">
+    <inertial>
+      <origin
+        xyz="4.9981E-05 -0.00076369 -0.66731"
+        rpy="0 0 0" />
+      <mass
+        value="0.38654" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_passive_linear_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_passive_linear_5"
+    type="fixed">
+    <origin
+      xyz="0 0 0.034"
+      rpy="0 0 0" />
+    <parent
+      link="link_passive_linear_4" />
+    <child
+      link="link_passive_linear_5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_endeffektor_roll">
+    <inertial>
+      <origin
+        xyz="3.8858E-16 9.2701E-14 -0.01895"
+        rpy="0 0 0" />
+      <mass
+        value="0.1254" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="./meshes/link_endeffektor_roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="joint_endeffektor_roll"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_passive_linear_5" />
+    <child
+      link="link_endeffektor_roll" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_Hip_Roll">
+    <inertial>
+      <origin
+        xyz="0.0031858 -0.00028131 -0.066103"
+        rpy="0 0 0" />
+      <mass
+        value="0.54342" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Hip_Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+  </link>
+  <joint
+    name="Joint_Hip_Roll"
+    type="fixed">
+    <origin
+      xyz="0 0.075 0.025"
+      rpy="3.14159265359 1.5707963267949 -1.5707963267949" />
+    <parent
+      link="link_endeffektor_roll" />
+    <child
+      link="Link_Hip_Roll" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_Hip_Pitch">
+    <inertial>
+      <origin
+        xyz="-0.015486 -0.00028849 -0.044683"
+        rpy="0 0 0" />
+      <mass
+        value="0.52736" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Hip_Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Hip_Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_Hip_Pitch"
+    type="revolute">
+    <origin
+      xyz="-0.0146 0 -0.072"
+      rpy="-1.5707963267949 0 -1.5707963267949" />
+    <parent
+      link="Link_Hip_Roll" />
+    <child
+      link="Link_Hip_Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.0"
+      friction="0.5"/>
+    <limit
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_Knee_Pitch">
+    <inertial>
+      <origin
+        xyz="-0.044768 -0.0009312 -1.74E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.11794" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Knee_Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="../meshes/Link_Knee_Pitch.STL" />
+      </geometry>
+      <lateral_friction value="1"/>
+    </collision>
+    <lateral_friction value="1"/>
+  </link>
+  <joint
+    name="Joint_Knee_Pitch"
+    type="revolute">
+    <origin
+      xyz="-0.15 0 -0.0742"
+      rpy="0 0 0" />
+    <parent
+      link="Link_Hip_Pitch" />
+    <child
+      link="Link_Knee_Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <dynamics
+      damping="0.0"
+      friction="0.5"/>
+    <limit
+      effort="160"
+      velocity="410" />
+  </joint>
+</robot>

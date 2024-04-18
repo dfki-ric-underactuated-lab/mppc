@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "mppc-release-version"
+version = "1.0.0"
+description = "Model Predictive Parkour Control"
+authors = ["Maximilian Albracht"]
+license = "GPL-3.0-or-later"
+
+[tool.poetry.dependencies]
+python = "^3.10 <3.11"
+moteus = "0.3.67"
+asyncio = "3.4.3"
+PyYAML = "6.0.1"
+mpl-plotter = "5.5.0"
+PyQt5 = "5.14.0"
+pandas = "1.5.3"
+scipy = "1.10.1"
+toml = "0.10.2"
+mini-cheetah-motor-driver-socketcan = "0.3.2"
+bitstring = "3.1.9"
+moteus-gui = "0.3.67"
+pybullet = "3.2.6"
+numpy = "1.24.4"
+shapely = "2.0.3"
+drake = "1.27.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

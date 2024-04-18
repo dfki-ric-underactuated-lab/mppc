@@ -1,0 +1,20 @@
+[model]
+urdf         = 'model/urdf/boomstick-hopper_wosupport.urdf'
+
+[general]
+simulator    = 'pybullet'
+control_freq = 500
+
+[Hip]
+joint        = 10
+# --------------------- mechanical
+kp           = 0
+kd           = 0
+torque_limit = 10
+
+[Knee]
+joint        = 11
+# --------------------- mechanical
+kp           = 0
+kd           = 0
+torque_limit = 10

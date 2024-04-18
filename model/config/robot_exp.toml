@@ -1,0 +1,23 @@
+[general]
+bus_id       = 4
+control_freq = 200
+
+[Hip]
+manufacturer = 'mjbots'
+model        = 'qdd100'
+motor_id     = 9
+# --------------------- mechanical
+kp           = 0
+kd           = 0
+torque_limit = 10
+gear_ratio   = 1
+
+[Knee]
+manufacturer = 'mjbots'
+model        = 'qdd100'
+motor_id     = 1
+# --------------------- mechanical
+kp           = 0
+kd           = 0
+torque_limit = 10
+gear_ratio   = 2
