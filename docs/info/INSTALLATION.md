@@ -11,7 +11,7 @@ and then:
 ```
 sudo apt-get install python3.10
 ```
-The tool `poetry` is used for dependency management and packaging in Python. As of 15.03.2024 installing it (on Linux, Ubuntu 22.04) is as simple as running:
+The tool `poetry` is used for dependency management and packaging in Python. As of 15.04.2024 installing it (on Linux, Ubuntu 22.04) is as simple as running:
 ```
 curl -sSL https://install.python-poetry.org | python3 -
 ```
@@ -23,13 +23,13 @@ sudo apt-get update && sudo apt install curl
 ## Cloning the Repository #
 Go into your parent folder for GitHub projects and then command:
 ```
-git clone git@git.hb.dfki.de:underactuated-robotics/release_version/mppc-release-version.git
+git clone git@github.com:dfki-ric-underactuated-lab/mppc.git
 ```
 
 ## Installation #
 Move into the parent folder of the repository with:
 ```
-cd mppc-release-version
+cd mppc
 ```
 If you have not already extended your python path to one of the parent folders of this repository, you should do so with:
 ```
