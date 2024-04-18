@@ -1,5 +1,5 @@
 [model]
-urdf         = 'model/urdf/boomstick-hopper_wosupport.urdf'
+urdf         = 'model/urdf/monoped_sim.urdf'
 
 [general]
 simulator    = 'pybullet'

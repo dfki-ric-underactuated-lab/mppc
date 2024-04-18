@@ -95,7 +95,7 @@ else:
 # pybullet state estimation
 with RedirectStream(stream=sys.stdout):
     client_se = pb.connect(pb.DIRECT)
-urdf_se = 'model/urdf/robot.urdf'
+urdf_se = 'model/urdf/monoped.urdf'
 startPos_se = [0, 0, 0]
 startAtt_se = pb.getQuaternionFromEuler([np.radians(0), -np.radians(90), np.radians(0)])
 robot_se = pb.loadURDF(urdf_se, startPos_se, startAtt_se, physicsClientId=client_se)
