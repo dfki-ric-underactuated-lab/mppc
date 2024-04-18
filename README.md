@@ -27,7 +27,7 @@ To install and use the software follow the steps in the [Software Installation G
 
 To see the robot completing a parkour in simulation, you can command:
 ```
-python software/experiments/experiment_mppc.py 1
+python software/experiment/experiment_mppc.py 1
 ```
 If you want to see a replay of an actual experiment in the real world with controller insights, you can command:
 ```
@@ -68,16 +68,9 @@ This work has been released under the BSD 3-Clause License. Details and terms of
 Albracht et al., (2024). Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments.
 ```
 @article{Albracht2024,
-  doi = {TBD},
-  url = {TBD},
   year = {2024},
-  publisher = {TBD},
-  volume = {TBD},
-  number = {TBD},
-  pages = {TBD},
   author = {Maximilian Albracht and Shivesh Kumar and Shubham Vyas and Frank Kirchner},
-  title = {Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments},
-  journal = {TBD}
+  title = {Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments}
 }
 ```
 
