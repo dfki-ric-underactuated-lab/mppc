@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mppc-release-version"
+name = "mppc"
 version = "1.0.0"
 description = "Model Predictive Parkour Control"
 authors = ["Maximilian Albracht"]
