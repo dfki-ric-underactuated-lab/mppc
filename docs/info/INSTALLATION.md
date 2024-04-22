@@ -33,14 +33,13 @@ cd mppc
 ```
 If you have not already extended your python path to one of the parent folders of this repository, you should do so with:
 ```
-echo "export PYTHONPATH=$(pwd):\$PYTHONPATH" >> ~/.bashrc
+echo "export PYTHONPATH=$(pwd):\$PYTHONPATH" >> ~/.bashrc && . ~/.bashrc
 ```
-After changes have been made to the `.bashrc` file, a new terminal session must be used to apply the changes.
 A virtual environment is then created in the parent folder of the repository with: 
 ```
 poetry shell
 ```
-Dependencies of the software are listed [here](pyproject.toml) and are installed with:
+Dependencies of the software are listed [here](../../pyproject.toml) and are installed with:
 ```
 poetry install
 ```
@@ -70,4 +69,3 @@ Replace `<experiment>` with a number corresponding to the experiment you want to
 |       5        | dynamic_4    |
 |       6        | two_rounds   |
 |       7        | disturbances |
-
