@@ -19,7 +19,7 @@ from software.plant.parameter import initialize_hopper
 ########################################################################################################################
 # SETTINGS #############################################################################################################
 ########################################################################################################################
-assert isinstance(sys.argv[1], str), 'you must provide the index of the system you want to use'
+assert isinstance(sys.argv[1], str), 'You must provide the index of the system you want to use'
 system = {
     '0': 'mjbots',
     '1': 'pybullet'
@@ -32,8 +32,9 @@ SAVE            = False
 duration        = 300  # [s]
 
 if system == 'pybullet':
-    key = input(f"Would you like to visualize the mppc behavior generation? "
-                f"This comes at the cost of a faltering simulation. (yes/no):")
+    key = input(f"Would you like to visualize the MPPC behavior generation? "
+                f"Please note, that this comes at the cost of a faltering simulation and that you need to close the "
+                f"appearing figures to continue the simulation. (yes/no)")
     while key not in ["yes", "y", "no", "n"]:
         key = input("Please answer with 'yes' or 'no': ").strip().lower()
     VISUALIZATION = True if key in ["yes", "y"] else False
