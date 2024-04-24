@@ -19,11 +19,13 @@ from software.plant.parameter import initialize_hopper
 ########################################################################################################################
 # SETTINGS #############################################################################################################
 ########################################################################################################################
-assert isinstance(sys.argv[1], str), 'You must provide the index of the system you want to use'
-system = {
-    '0': 'mjbots',
-    '1': 'pybullet'
-}[sys.argv[1]]
+try:
+    system = {'0': 'mjbots', '1': 'pybullet'}[sys.argv[1]]
+except:
+    print("Please indicate which system you want to use.\n"
+          "\'0\' -> mjbots\n"
+          "\'1\' -> pybullet\n")
+    sys.exit(1)
 
 EXPERIMENT      = 'simulation_01'
 obstacle_course = 1

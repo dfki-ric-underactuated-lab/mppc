@@ -13,8 +13,8 @@ from software.parkour import objectPlacer
 from software.util import read
 
 # general
-assert isinstance(sys.argv[1], str), 'you must provide the index of the experiment you want to run'
-experiment = {
+try:
+    experiment = {
     '1': 'static',
     '2': 'dynamic_1',
     '3': 'dynamic_2',
@@ -22,7 +22,17 @@ experiment = {
     '5': 'dynamic_4',
     '6': 'two_rounds',
     '7': 'disturbances',
-}[sys.argv[1]]
+    }[sys.argv[1]]
+except:
+    print("Please indicate which experiment you want to see.\n"
+          "\'1\' -> static\n"
+          "\'2\' -> dynamic_1\n"
+          "\'3\' -> dynamic_2\n"
+          "\'4\' -> dynamic_3\n"
+          "\'5\' -> dynamic_4\n"
+          "\'6\' -> two_rounds\n"
+          "\'7\' -> disturbances\n")
+    sys.exit(1)
 
 save = False
 urdf = 'model/urdf/monoped.urdf'
@@ -139,4 +149,4 @@ with RedirectStream(stream=sys.stdout):
 if save:
     print(f"Replay Saved: \"data/experiment/{experiment}/replay.mp4\"")
 
-print("-------------- Successful Runout --------------")
+print("-- Successful Runout --\n")
