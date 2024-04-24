@@ -204,7 +204,8 @@ class StateMachine(AbstractController):
                                                x_goal, self.goal_tolerance, N=i)
                     if res_dict is None:
                         if i == N[-1]:
-                            raise Exception("-- NO SOLUTION FOUND --")
+                            print(f"-- NO SOLUTION FOUND --")
+                            sys.exit(1)
                     else:
                         t_comp = time.time() - t_start
                         res_dict["mppc_time"] = t_comp
@@ -266,6 +267,6 @@ class StateMachine(AbstractController):
                     print(f"Data Saved: \"{self.path}\"")
                 with RedirectStream(stream=sys.stdout):
                     pb.disconnect()
-                sys.tracebacklimit = 0
-                raise Exception ("-- Successful Parkour Traversal --")
+                print("-- Successful Parkour Traversal --")
+                sys.exit(1)
         return u
