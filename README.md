@@ -74,4 +74,4 @@ Albracht et al., (2024). Model Predictive Parkour Control of a Monoped Hopper in
 }
 ```
 
-[Back to the top](#introduction-to-the-project)
+<a href="#top">Back to top</a>
