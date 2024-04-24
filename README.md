@@ -65,13 +65,6 @@ This work has been released under the BSD 3-Clause License. Details and terms of
 
 ## Citation
 
-Albracht et al., (2024). Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments.
-```
-@article{Albracht2024,
-  year = {2024},
-  author = {Maximilian Albracht and Shivesh Kumar and Shubham Vyas and Frank Kirchner},
-  title = {Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments}
-}
-```
+Under revision.
 
 <a href="#top">Back to top</a>
