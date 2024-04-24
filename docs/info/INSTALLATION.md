@@ -46,7 +46,7 @@ poetry install
 
 ## Running Code #
 
-To run any code you need to be inside the repository parent folder. If not already you then need to create a virtual environment with poetry by commanding:
+To run any code you need to be inside the repository parent folder. If you haven't already, activate the virtual environment using poetry by running the command:
 ```
 poetry shell
 ```
