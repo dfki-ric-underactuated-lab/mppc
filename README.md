@@ -19,6 +19,12 @@ The execution of this optimized path is then achieved through a state machine em
 
 [![Watch on Youtube](https://img.youtube.com/vi/IYp460e2Ijg/0.jpg)](https://www.youtube.com/watch?v=IYp460e2Ijg)
 
+## Publication
+
+The work is published in IEEE Robotics and Automation Letters 2024.
+* Paper is available on [IEEE](https://ieeexplore.ieee.org/document/10638672) and [arXiv](https://arxiv.org/pdf/2408.14362).
+* Video is available on [YouTube](https://www.youtube.com/watch?v=vxFpLKi-pIQ).
+
 ## Installation
 
 To install and use the software follow the steps in the [Software Installation Guide](docs/info/INSTALLATION.md).
@@ -65,6 +71,17 @@ This work has been released under the BSD 3-Clause License. Details and terms of
 
 ## Citation
 
-Under revision.
+M. Albracht, S. Kumar, S. Vyas and F. Kirchner, "Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments," in IEEE Robotics and Automation Letters, vol. 9, no. 10, pp. 8507-8514, Oct. 2024, doi: 10.1109/LRA.2024.3445668.
+```
+@ARTICLE{10638672,
+  author={Albracht, Maximilian and Kumar, Shivesh and Vyas, Shubham and Kirchner, Frank},
+  journal={IEEE Robotics and Automation Letters}, 
+  title={Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments}, 
+  year={2024},
+  volume={9},
+  number={10},
+  pages={8507-8514},
+  doi={10.1109/LRA.2024.3445668}}
+```
 
 <a href="#top">Back to top</a>
