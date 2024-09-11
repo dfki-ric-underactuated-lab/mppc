@@ -42,8 +42,8 @@ python software/visualization/video/replay.py 4
 
 ## Authors #
 
-* [Maximilian Albracht](https://robotik.dfki-bremen.de/en/about-us/staff/person/maal10)
-* [Shivesh Kumar](https://robotik.dfki-bremen.de/en/about-us/staff/person/shku02)
+* [Maximilian Albracht](https://www.linkedin.com/in/max-albracht)
+* [Shivesh Kumar](https://www.chalmers.se/en/persons/shivesh)
 * [Shubham Vyas](https://robotik.dfki-bremen.de/en/about-us/staff/person/shvy01)
 
 <img height="68" src="docs/logos/affiliations.png" />
