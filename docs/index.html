@@ -1,11 +1,314 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Meine GitHub Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments – Landing Page</title>
+  <style>
+    /* Reset & base styles */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0 1rem;
+      background: #f9f9f9;
+      color: #222;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 3rem auto 4rem;
+      background: white;
+      padding: 2.5rem 3.5rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgb(0 0 0 / 0.08);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .container:hover {
+      box-shadow: 0 12px 30px rgb(0 0 0 / 0.12);
+    }
+
+    /* Header */
+    header {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 2rem;
+      padding-bottom: 0.75rem;
+    }
+    h1 {
+      margin: 0 0 0.3rem 0;
+      font-weight: 700;
+      font-size: 2.4rem;
+      color: #111;
+      line-height: 1.2;
+    }
+    .authors {
+      font-style: italic;
+      color: #555;
+      font-size: 1.1rem;
+      user-select: text;
+    }
+
+    /* Abstract */
+    .abstract {
+      margin: 1.5rem 0 2.5rem;
+      font-size: 1.15rem;
+      color: #333;
+      line-height: 1.55;
+      border-left: 5px solid #0066cc;
+      padding-left: 1.2rem;
+      background: #e8f0fe;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    /* Links */
+    .links {
+      margin-bottom: 2.5rem;
+    }
+    .links a {
+      display: inline-block;
+      margin-right: 1.4rem;
+      margin-bottom: 0.5rem;
+      padding: 0.65rem 1.3rem;
+      background-color: #0066cc;
+      color: white;
+      font-weight: 600;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgb(0 102 204 / 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      font-size: 1rem;
+      user-select: none;
+    }
+    .links a:hover,
+    .links a:focus {
+      background-color: #004a99;
+      box-shadow: 0 4px 10px rgb(0 74 153 / 0.6);
+      outline: none;
+    }
+
+    /* Teaser image */
+    .teaser {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 6px 16px rgb(0 0 0 / 0.12);
+      object-fit: contain;
+      user-select: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      text-align: center;
+      font-size: 0.95rem;
+      color: #777;
+      padding: 1.25rem 0;
+      border-top: 1px solid #ddd;
+      user-select: none;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+    footer a {
+      color: #0066cc;
+    }
+    footer a:hover,
+    footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+
+    /* Dark Mode Styles */
+    body.dark {
+      background: #121212;
+      color: #eee;
+    }
+    body.dark .container {
+      background: #1e1e1e;
+      box-shadow: 0 8px 20px rgb(255 255 255 / 0.1);
+    }
+    body.dark .container:hover {
+      box-shadow: 0 12px 30px rgb(255 255 255 / 0.15);
+    }
+    body.dark header {
+      border-bottom-color: #444;
+    }
+    body.dark h1 {
+      color: #eee;
+    }
+    body.dark .authors {
+      color: #bbb;
+    }
+    body.dark .abstract {
+      background: #2c3e50;
+      border-left-color: #3399ff;
+      color: #ddd;
+      font-weight: 400;
+    }
+    body.dark .links a {
+      background-color: #3399ff;
+      box-shadow: 0 2px 6px rgb(51 153 255 / 0.7);
+      color: #fff;
+    }
+    body.dark .links a:hover,
+    body.dark .links a:focus {
+      background-color: #1a73e8;
+      box-shadow: 0 4px 10px rgb(26 115 232 / 0.85);
+    }
+    body.dark .teaser {
+      box-shadow: 0 6px 16px rgb(255 255 255 / 0.15);
+    }
+    body.dark footer {
+      color: #aaa;
+      border-top-color: #444;
+    }
+    body.dark footer a {
+      color: #3399ff;
+    }
+    body.dark footer a:hover,
+    body.dark footer a:focus {
+      text-decoration: underline;
+    }
+
+    /* Dark Mode Toggle Button fixed top-right */
+    .dark-mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+      background: #0066cc;
+      border: none;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 2px 6px rgb(0 102 204 / 0.4);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      user-select: none;
+      font-size: 1rem;
+      z-index: 1000;
+    }
+    .dark-mode-toggle:hover,
+    .dark-mode-toggle:focus {
+      background-color: #004a99;
+      box-shadow: 0 4px 10px rgb(0 74 153 / 0.6);
+      outline: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 700px) {
+      .container {
+        padding: 2rem 2rem;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+      }
+      .authors {
+        text-align: left;
+      }
+      .links a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        margin-right: 1rem;
+      }
+    }
+    @media (max-width: 400px) {
+      body {
+        padding: 0 0.75rem;
+      }
+      .links a {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.75rem;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hallo Welt!</h1>
-  <p>Willkommen auf meiner GitHub Pages-Webseite.</p>
+  <button class="dark-mode-toggle" aria-pressed="false" aria-label="Toggle dark mode">Dark Mode</button>
+
+  <div class="container" role="main">
+    <header>
+      <h1>Model Predictive Parkour Control of a Monoped Hopper in Dynamically Changing Environments</h1>
+      <p class="authors">Maximilian Albracht, Shivesh Kumar, Shubham Vyas, Frank Kirchner</p>
+    </header>
+
+    <!-- Optional: Teaser image -->
+    <img src="figures/snapshots_merged.png" alt="Combined snapshots of a parkour traversal." class="teaser" />
+
+    <section class="abstract" aria-label="Abstract">
+      <strong>Abstract:</strong><br />
+      Legged robots excel at navigating challenging and obstructed terrain, requiring dynamic and precise control. 
+      This paper introduces a novel model predictive parkour controller that computes optimal paths in real-time through changing obstacle courses using mixed-integer motion planning. 
+      Execution is achieved via a robust state machine with PD control and feedforward torques, enabling accurate and reliable movement.
+    </section>
+
+    <nav class="links" aria-label="Important links to the paper">
+      <a href="https://arxiv.org/pdf/2408.14362" target="_blank" rel="noopener noreferrer" download>PDF</a>
+      <a href="https://doi.org/10.1109/LRA.2024.3445668" target="_blank" rel="noopener noreferrer">DOI</a>
+      <a href="https://arxiv.org/abs/2408.14362" target="_blank" rel="noopener noreferrer">arXiv</a>
+      <a href="https://github.com/dfki-ric-underactuated-lab/mppc" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.youtube.com/watch?v=vxFpLKi-pIQ" target="_blank" rel="noopener noreferrer">YouTube</a>
+    </nav>
+  </div>
+
+  <footer>
+    © 2025 Maximilian Albracht • <a href="mailto:maximilian.albracht@dlr.de">Contact</a>
+  </footer>
+
+  <script>
+    const toggleBtn = document.querySelector('.dark-mode-toggle');
+    const body = document.body;
+
+    // Load saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark');
+      toggleBtn.textContent = 'Light Mode';
+      toggleBtn.setAttribute('aria-pressed', 'true');
+    } else {
+      toggleBtn.textContent = 'Dark Mode';
+      toggleBtn.setAttribute('aria-pressed', 'false');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = body.classList.toggle('dark');
+      if (isDark) {
+        localStorage.setItem('darkMode', 'enabled');
+        toggleBtn.textContent = 'Light Mode';
+        toggleBtn.setAttribute('aria-pressed', 'true');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+        toggleBtn.textContent = 'Dark Mode';
+        toggleBtn.setAttribute('aria-pressed', 'false');
+      }
+    });
+  </script>
 </body>
 </html>
